@@ -4,11 +4,12 @@ import com.EduPlusCampus.AICounsellor.AICounsellor.model.admission;
 import com.EduPlusCampus.AICounsellor.AICounsellor.repository.admissionRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/admission")
-@CrossOrigin(origins = "http://localhost:5173")
+@Validated
 public class admissionController {
 
     private final admissionRepository admissionRepository;

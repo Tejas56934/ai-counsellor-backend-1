@@ -1,10 +1,14 @@
 // src/api.js
 import axios from 'axios';
 
+// Use your Render backend URL for production
+const BASE_URL = process.env.REACT_APP_API_URL || 'https://ai-counsellor-backend-1.onrender.com/api';
+
 // Create Axios instance
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api', // direct backend URL
+  baseURL: BASE_URL,
   timeout: 30000,
+});
 });
 
 // Optional: response interceptor for global errors
