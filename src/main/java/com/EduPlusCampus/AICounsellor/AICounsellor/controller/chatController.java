@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/chat")
 @Validated
-// restrict origins in production to the actual front-end domain, e.g. "https://yourfrontend.example"
 public class chatController {
 
     private final AICounsellorModel aiService;

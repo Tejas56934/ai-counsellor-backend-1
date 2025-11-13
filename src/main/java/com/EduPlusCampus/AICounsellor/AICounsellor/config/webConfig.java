@@ -19,7 +19,8 @@ public class webConfig {
                         .allowedOrigins(
                                 "http://localhost:3000",
                                 "http://localhost:5173",
-                                "https://ai-counsellor-ioxq89tqt-tejas-projects-f7079041.vercel.app"
+                                "https://ai-counsellor.vercel.app", // <-- your final vercel domain
+                                "https://ai-counsellor-ioxq89tqt-tejas-projects-f7079041.vercel.app" // keep old one if needed
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
@@ -28,3 +29,4 @@ public class webConfig {
         };
     }
 }
+
