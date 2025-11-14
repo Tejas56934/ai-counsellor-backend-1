@@ -14,4 +14,4 @@ RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Start the application
-CMD ["java", "-jar", "target/ai-counsellor-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/AICounsellor-0.0.1-SNAPSHOT.jar"]
