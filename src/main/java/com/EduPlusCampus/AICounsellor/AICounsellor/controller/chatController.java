@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/chat")
 @Validated
 // restrict origins in production to the actual front-end domain, e.g. "https://yourfrontend.example"
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173", originPatterns = "https://ai-counsellor-ioxq89tqt-tejas-projects-f7079041.vercel.app")
 public class chatController {
 
     private final AICounsellorModel aiService;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/admission")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173", originPatterns = "https://ai-counsellor-ioxq89tqt-tejas-projects-f7079041.vercel.app")
 public class admissionController {
 
     private final admissionRepository admissionRepository;
