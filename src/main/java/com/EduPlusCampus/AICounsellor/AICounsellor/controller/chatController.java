@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.*;
  * Chat endpoints. This controller never exposes the API key.
  */
 @RestController
-@RequestMapping("/chat")
+@RequestMapping("/api/chat")
 @Validated
+// restrict origins in production to the actual front-end domain, e.g. "https://yourfrontend.example"
+@CrossOrigin(origins = "http://localhost:5173")
 public class chatController {
 
     private final AICounsellorModel aiService;
