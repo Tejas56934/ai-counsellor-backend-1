@@ -3,8 +3,7 @@ import axios from 'axios';
 
 // Create Axios instance
 const api = axios.create({
-  baseURL: 'https://ai-counsellor-backend-1.onrender.com', // ✅ Use Render URL
-  withCredentials: true,
+  baseURL: 'https://ai-counsellor-backend-1.onrender.com/api',
   timeout: 30000,
 });
 
@@ -21,7 +20,7 @@ api.interceptors.response.use(
 // -------------------
 export async function askChat(message, context = 'Home') {
   const payload = { message, context };
-  const resp = await api.post('/api/chat/ask', payload);
+  const resp = await api.post('/chat/ask', payload);
   return resp.data;
 }
 
@@ -29,7 +28,7 @@ export async function askChat(message, context = 'Home') {
 // Admission Submission
 // -------------------
 export async function submitAdmission(formData) {
-  const resp = await api.post('/api/admission/submit', formData);
+  const resp = await api.post('/admission/submit', formData);
   return resp.data;
 }
 
