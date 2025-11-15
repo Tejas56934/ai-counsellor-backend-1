@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create Axios instance
 const api = axios.create({
-  baseURL: 'https://ai-counsellor-backend-1.onrender.com/api', // ✅ Use Render URL
+  baseURL: 'https://ai-counsellor-backend-1.onrender.com', // ✅ Use Render URL
   timeout: 30000,
 });
 
