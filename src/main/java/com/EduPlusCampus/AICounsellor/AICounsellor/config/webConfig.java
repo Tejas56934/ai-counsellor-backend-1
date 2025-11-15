@@ -17,9 +17,7 @@ public class webConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(
-                                "http://localhost:3000",
-                                "http://localhost:5173",
-                                "https://ai-counsellor.vercel.app", // <-- your final vercel domain
+
                                 "https://ai-counsellor-ioxq89tqt-tejas-projects-f7079041.vercel.app" // keep old one if needed
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
