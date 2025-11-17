@@ -1,13 +1,13 @@
 package com.EduPlusCampus.AICounsellor.AICounsellor.controller;
 
-import com.EduPlusCampus.AICounsellor.AICounsellor.model.admission;
+import com.EduPlusCampus.AICounsellor.AICounsellor.model.Admission;
 import com.EduPlusCampus.AICounsellor.AICounsellor.repository.admissionRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/admission")
+@RequestMapping("/api/new-admission")
 @CrossOrigin(
         origins = {
                 "http://localhost:5173",
@@ -24,7 +24,7 @@ public class admissionController {
     }
 
     @PostMapping("/submit")
-    public ResponseEntity<?> submit(@Valid @RequestBody admission admission) {
+    public ResponseEntity<?> submit(@Valid @RequestBody Admission admission) {
         var saved = admissionRepository.save(admission);
         // In production return a secure token or ID — do not return any secrets
         return ResponseEntity.ok().body(

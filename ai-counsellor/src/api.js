@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create Axios instance
 const api = axios.create({
-  baseURL: 'https://ai-counsellor-backend-1.onrender.com/api',
+  baseURL: 'http://localhost:8080/api',
   timeout: 30000,
 });
 
@@ -28,7 +28,7 @@ export async function askChat(message, context = 'Home') {
 // Admission Submission
 // -------------------
 export async function submitAdmission(formData) {
-  const resp = await api.post('/admission/submit', formData);
+  const resp = await api.post('/new-admission/submit', formData);
   return resp.data;
 }
 
