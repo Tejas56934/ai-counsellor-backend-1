@@ -18,7 +18,7 @@ public class Admission {
     private String fullName;
 
     @NotBlank(message = "Email is required")
-    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@gmail\\.com$", message = "Email must be a valid Gmail address")
+//    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@gmail\\.com$", message = "Email must be a valid Gmail address")
     private String email;
 
     @NotBlank(message = "Mobile number is required")
@@ -31,7 +31,11 @@ public class Admission {
     private String country;
     private String city;
 
-    private LocalDate dob;
+
+    private String stream;
+    private String level;
+    private String programme;
+
 
     public Admission() {}
 
@@ -63,6 +67,13 @@ public class Admission {
     public String getCity() { return city; }
     public void setCity(String city) { this.city = city; }
 
-    public LocalDate getDob() { return dob; }
-    public void setDob(LocalDate dob) { this.dob = dob; }
+
+    public String getStream() {return stream;}
+    public void setStream(String stream) {this.stream = stream;}
+
+    public String getLevel() {return level;}
+    public void setLevel(String level) {this.level = level;}
+
+    public String getProgramme() {return programme;}
+    public void setProgramme(String programme) {this.programme = programme;}
 }
